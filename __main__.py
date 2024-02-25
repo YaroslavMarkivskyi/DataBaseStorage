@@ -1,7 +1,6 @@
 from database import Database
 from config import Config
 
-
 if __name__ == "__main__":
     db_type = Config.DB_TYPE
     db_host = Config.DB_HOST
