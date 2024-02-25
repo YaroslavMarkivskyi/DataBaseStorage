@@ -8,7 +8,7 @@ class TournamentType(BaseModel):
     TournamentType model class.
     """
     __tablename__ = "tournament_types"
-    id = Column(Integer, Sequence('tournament_type_id_seq'), primary_key=True)
+    id = Column(Integer, Sequence('tournament_type_id_seq'), primary_key=True, autoincrement=True)
     name = Column(String)
     description = Column(String)
     teams = Column(Integer)

@@ -8,7 +8,7 @@ class Team(BaseModel):
     Team model class.
     """
     __tablename__ = "teams"
-    id = Column(Integer, Sequence('team_id_seq'), primary_key=True)
+    id = Column(Integer, Sequence('team_id_seq'), primary_key=True, autoincrement=True)
     name = Column(String)
     stadium = Column(String)
     coach = Column(String)

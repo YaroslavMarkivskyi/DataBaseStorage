@@ -1,16 +1,15 @@
-from sqlalchemy import Column, Integer, Sequence, String, ForeignKey
+from sqlalchemy import Column, Integer, Sequence, ForeignKey
 
-from model.stage import Stage
+from model.base import BaseModel
 
 
-class Group(Stage):
+class Group(BaseModel):
     """
     Group model class.
     """
     __tablename__ = "groups"
-
-    id = Column(Integer, Sequence('group_id_seq'), primary_key=True)
-    name = Column(String, nullable=False)
+    id = Column(Integer, Sequence('group_id_seq'), primary_key=True, autoincrement=True)
+    stage = Column(ForeignKey('stages.id'), nullable=False)
     team_1 = Column(ForeignKey('group_summaries.id'), nullable=False)
     team_2 = Column(ForeignKey('group_summaries.id'), nullable=False)
     team_3 = Column(ForeignKey('group_summaries.id'), nullable=False)
