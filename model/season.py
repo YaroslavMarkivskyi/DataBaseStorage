@@ -1,9 +1,9 @@
 from sqlalchemy import Sequence, Integer, Column, Date, String
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class Season(Base):
+class Season(BaseModel):
     """
     Season model class.
     """

@@ -1,9 +1,9 @@
 from sqlalchemy import Sequence, Integer, Column, ForeignKey
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class Summary(Base):
+class Summary(BaseModel):
     """
     Summary model class.
     """

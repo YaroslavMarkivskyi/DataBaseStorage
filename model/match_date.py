@@ -1,9 +1,9 @@
 from sqlalchemy import Sequence, Integer, Column, Date, ForeignKey
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class MatchDate(Base):
+class MatchDate(BaseModel):
     """
     MatchDay model class.
     """

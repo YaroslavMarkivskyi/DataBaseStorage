@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, Sequence, String
 
-from base import Base
+from base import BaseModel
 
 
-class Event(Base):
+class Event(BaseModel):
     """
     Event model class.
     """

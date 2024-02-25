@@ -1,10 +1,10 @@
 
 from sqlalchemy import Column, Integer, String, Sequence, ForeignKey
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class Player(Base):
+class Player(BaseModel):
     """
     Player model class.
     """

@@ -1,9 +1,9 @@
 from sqlalchemy import Sequence, Integer, Column, ForeignKey, String
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class Tournament(Base):
+class Tournament(BaseModel):
     """
     Tournament model class.
     """

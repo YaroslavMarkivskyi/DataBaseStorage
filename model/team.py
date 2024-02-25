@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, Sequence, String
 
-from model.base import Base
+from model.base import BaseModel
 
 
-class Team(Base):
+class Team(BaseModel):
     """
     Team model class.
     """
