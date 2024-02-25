@@ -1,4 +1,4 @@
-from database import Database
+from business.database import Database
 from config import Config
 
 if __name__ == "__main__":
