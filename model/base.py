@@ -7,6 +7,7 @@ class BaseModel:
     """
     Base model for all models.
     """
+
     @classmethod
     @declared_attr
     def __tablename__(cls):
