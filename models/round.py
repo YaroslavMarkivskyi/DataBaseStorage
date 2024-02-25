@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Sequence, ForeignKey
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class Round(BaseModel):

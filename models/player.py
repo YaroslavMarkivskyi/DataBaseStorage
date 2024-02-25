@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Sequence, ForeignKey
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class Player(BaseModel):

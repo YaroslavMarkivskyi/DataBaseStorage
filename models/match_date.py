@@ -1,6 +1,6 @@
 from sqlalchemy import Sequence, Integer, Column, Date, ForeignKey
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class MatchDate(BaseModel):

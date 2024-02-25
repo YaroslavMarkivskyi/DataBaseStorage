@@ -1,6 +1,6 @@
 from sqlalchemy import Integer, Column, ForeignKey, String
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class Stage(BaseModel):

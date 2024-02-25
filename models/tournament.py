@@ -1,6 +1,6 @@
 from sqlalchemy import Sequence, Integer, Column, ForeignKey, String
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class Tournament(BaseModel):

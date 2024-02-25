@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Sequence, String
 
-from model.base import BaseModel
+from models.base import BaseModel
 
 
 class Team(BaseModel):
