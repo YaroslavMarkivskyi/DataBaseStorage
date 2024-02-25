@@ -8,6 +8,7 @@ class Config:
     """
     Configuration class to store all the configuration variables.
     """
+    DB_TYPE = config['database']['db_type']
     DB_HOST = config['database']['db_host']
     DB_NAME = config['database']['db_name']
     DB_USER = config['database']['db_user']
