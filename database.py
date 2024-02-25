@@ -1,8 +1,8 @@
 import psycopg2
-from sqlalchemy import create_engine, exc
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from model.base import Base
+from model import *
 
 
 class Database:
@@ -23,17 +23,11 @@ class Database:
             host=self.__db_url,
             port=self.__port,
         )
-        self.__engine = create_engine(self._compose_db_url())
+        self.__engine = create_engine(self._compose_db_url(), echo=True)
         self.__con.autocommit = True
-        self._create_database()
+        self.__Session = sessionmaker(bind=self.__engine)
 
-    def _create_database(self):
-        try:
-            self.__con.cursor().execute(f"CREATE DATABASE {self.__db_name}")
-        except (exc.ProgrammingError, psycopg2.errors.DuplicateDatabase):
-            pass
-        finally:
-            self.__con.close()
+        BaseModel.metadata.create_all(self.__engine)
 
     def _compose_db_url(self):
         return f"postgresql://{self.__db_user}:{self.__db_password}@{self.__db_url}/{self.__db_name}"
