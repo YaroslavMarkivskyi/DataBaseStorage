@@ -31,7 +31,7 @@ class Database:
         BaseModel.metadata.create_all(self.__engine)
 
     def add_record(self, model_instance):
-        """Mathod to add a record to the database."""
+        """Method to add a record to the database."""
         with self.__Session() as session:
             session.add(model_instance)
             session.commit()
