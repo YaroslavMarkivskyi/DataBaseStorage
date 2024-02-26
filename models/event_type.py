@@ -1,6 +1,6 @@
 from sqlalchemy import String, Column, Integer, Sequence
 
-from models import BaseModel
+from models.base import BaseModel
 
 
 class EventType(BaseModel):
