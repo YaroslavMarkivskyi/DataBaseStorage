@@ -12,4 +12,5 @@ from models.group_summary import GroupSummary
 from models.result import Result
 from models.tournament import Tournament
 from models.tournament_type import TournamentType
+from models.event_type import EventType
 from models.base import BaseModel
