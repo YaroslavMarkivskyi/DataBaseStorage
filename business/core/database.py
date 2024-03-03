@@ -35,6 +35,7 @@ class Database:
         with self.__Session() as session:
             session.add(model_instance)
             session.commit()
+            session.refresh(model_instance)
 
     def get_all_records(self, model):
         """Method to get all records of a given model."""
@@ -51,12 +52,15 @@ class Database:
         with self.__Session() as session:
             session.merge(model_instance)
             session.commit()
+            session.refresh(model_instance)
 
     def delete_record(self, model_instance):
         """Method to delete a record from the database."""
         with self.__Session() as session:
             session.delete(model_instance)
             session.commit()
+            session.refresh(model_instance)
+
 
     def _compose_db_url(self):
         return f"{self.__db_type}ql://{self.__db_user}:{self.__db_password}@{self.__db_host}/{self.__db_name}"
