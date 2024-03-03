@@ -1,5 +1,5 @@
-from business.database import Database
-from config import Config
+from business.core.database import Database
+from business.core.config import Config
 
 if __name__ == "__main__":
     db_type = Config.DB_TYPE
