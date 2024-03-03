@@ -8,5 +8,5 @@ class DoctorService(BaseModel):
     Models to connect one of clinic doctor and one of clinic service. Replace relationship many-to-many.
     """
     id = Column(Integer, Sequence('doctor_service_id_seq'), primary_key=True, autoincrement=True)
-    service = Column(ForeignKey('services.id'), nullable=False)
+    service_type = Column(ForeignKey('servicetypes.id'), nullable=False)
     doctor = Column(ForeignKey('doctors.id'), nullable=False)

@@ -12,5 +12,5 @@ class User(BaseModel):
     name = Column(String(20), nullable=False)
     last_name = Column(String(20), nullable=False)
     phone = Column(String(20), nullable=False)
-    email = Column(String(20), nullable=False)
+    email = Column(String(50), nullable=False)
     password = Column(String(128), nullable=False)

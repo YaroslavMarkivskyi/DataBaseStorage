@@ -11,4 +11,4 @@ class Service(BaseModel):
     doctor_service = Column(ForeignKey('doctorservices.id'), nullable=False)
     visit = Column(ForeignKey('visits.id'), nullable=False)
     description = Column(String(100), nullable=False)
-    conclution = Column(String(100), nullable=False)
+    conclusion = Column(String(100), nullable=False)
